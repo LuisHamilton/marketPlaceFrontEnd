@@ -1,0 +1,26 @@
+<div class="productsList">
+    
+    <div class="productComponent" *ngFor="let product of products">
+        <div class="topBox">
+            <img src="assets/imagem.png" alt="imgProduto" width="120px" height="100px">
+            <h3>
+                <a [title]="product.name + ' details'"
+                    [routerLink]="['/product', product.id]">
+                    {{product.name}}
+                </a>
+            </h3>
+        </div>
+        <div class="bottomBox">
+            <h2>
+                <p>R${{product.price}},00</p>
+            </h2>
+            <h2>
+                <p>
+                    {{product.description}}
+                </p>
+            </h2>
+            <img src="assets/coracao.png" alt="imgCoracao" width="30px" height="30px">
+        </div>
+        
+    </div>
+</div>
