@@ -2,6 +2,7 @@ export interface Product {
     id: number;
     name: string;
     price: number;
+    image: string;
     description: string;
   }
   
@@ -10,8 +11,9 @@ export interface Product {
       id: 1,
       name: 'Phone XL',
       price: 799,
+      image: 'a',
       description: 'A large phone with one of the best screens'
-    },
+    }/*,
     {
       id: 2,
       name: 'Phone Mini',
@@ -89,7 +91,7 @@ export interface Product {
       name: 'Phone Standard234',
       price: 299,
       description: 'abcdef'
-    }
+    }*/
   ];
   
   

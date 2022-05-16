@@ -2,7 +2,7 @@
     
     <div class="productComponent" *ngFor="let product of products">
         <div class="topBox">
-            <img src="assets/imagem.png" alt="imgProduto" width="120px" height="100px">
+            <img src="{{product.image}}" alt="imgProduto" width="120px" height="100px">
             <h3>
                 <a [title]="product.name + ' details'"
                     [routerLink]="['/product', product.id]">
@@ -12,7 +12,7 @@
         </div>
         <div class="bottomBox">
             <h2>
-                <p>R${{product.price}},00</p>
+                <p>R${{product.price}}</p>
             </h2>
             <h2>
                 <p>

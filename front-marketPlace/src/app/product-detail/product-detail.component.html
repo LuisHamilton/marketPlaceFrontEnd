@@ -1,4 +1,5 @@
 <div *ngIf="product">
+    <img src="{{product.image}}" alt="imgProduto" width="120px" height="100px">
     <h3>{{product.name}}</h3>
     <h4>{{product.price | currency}}</h4>
     <p>{{product.description}}</p>
