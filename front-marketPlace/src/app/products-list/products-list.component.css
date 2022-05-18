@@ -1,0 +1,107 @@
+.productComponent{
+    position: relative;
+    background: white;
+    color: #fff;
+    font-weight: lighter;
+    text-decoration: none;
+	text-transform: uppercase;
+    margin: 8px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.productComponent:hover
+{
+	background: var(--clr);
+	color: var(--clr);
+	letter-spacing: 0.0075em;
+	box-shadow: 0 0 35px var(--clr);
+}
+
+.productComponent:before
+{
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: #27282c;
+    border-radius: 20px;
+}
+
+a i
+{
+	position: absolute;
+	inset: 0;
+	display: block;
+}
+
+a i::before
+{
+	content: '';
+	position: absolute; 
+	top: 0;
+	left: 80%;
+	width: 10px;
+	height: 4px;
+	background: #27282c;
+	transform: translateX(-50%) skewX(325deg);
+	transition: 0.5s;
+}
+
+a:hover i::before
+{
+	width: 20px;
+	left: 20%;
+}
+
+a i::after
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	width: 10px;
+	height: 4px;
+	background: #27282c;
+	transform: translateX(-50%) skewX(325deg);
+	transition: 0.5s;
+}
+a:hover i::after
+{
+	width: 20px;
+	left: 80%;
+}
+
+.topBox
+{
+	position: relative;
+	z-index: 1;
+}
+.bottomBox
+{
+	position: relative;
+	z-index: 1;
+}
+.productsList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.topBox{
+    margin-top: 15px;
+    display: flex;
+}
+
+.bottomBox{
+    margin-left: 10px;
+}
+
+img
+{
+    margin-left: 10px;
+    border-radius: 20px;
+}

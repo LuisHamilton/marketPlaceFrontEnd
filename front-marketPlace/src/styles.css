@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 * {
     font-family: 'Roboto', Arial, sans-serif;
-    color: #616161;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,14 +9,7 @@
  
   body
   {
-    background: linear-gradient(-90deg,#85C8D2,#6D93CF,#273CCB) 
-  }
-
-  .container {
-    display: flex;
-    flex-direction:column;
-   
-    
+    background: #27282c;
   }
   
   router-outlet + *  {
@@ -25,10 +17,6 @@
   }
   
   /* Text */
-  
-  h1 {
-    font-size: 32px;
-  }
   
   h2 {
     font-size: 20px;
@@ -53,114 +41,23 @@
   a:hover {
     opacity: 0.8;
   }
-  
-  /* Input */
-  
-  input {
-    font-size: 14px;
-    border-radius: 2px;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #BDBDBD;
-  }
-  
-  label {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 4px;
-    display: block;
-    text-transform: uppercase;
-  }
-  
-  /* Button */
-  .button, button {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #1976d2;
-    color: white;
-    border: none;
-  }
-  
-  .button:hover, button:hover {
-    opacity: 0.8;
-    font-weight: normal;
-  }
-  
-  .button:disabled, button:disabled {
-    opacity: 0.5;
-    cursor: auto;
-  }
-  
-  /* Fancy Button */
-  
-  .fancy-button {
-    background-color: white;
-    color: #1976d2;
-  }
-  
-  .fancy-button i.material-icons {
-    color: #1976d2;
-    padding-right: 4px;
-  }
-  
+
   /* Top Bar */
-  
   app-top-bar {
-    width: 100%;
+    position: relative;
+    left: 200px;
+    width: 80%;
     height: 68px;
-    background-color: #27282c;
+    background-color: #fff;
     padding: 16px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 20px;
   }
   
   app-top-bar h1 {
-    color: white;
+    color: black;
     margin: 0;
-  }
-  
-  /* Checkout Cart, Shipping Prices */
-  
-  .cart-item, .shipping-item {
-    width: 100%;
-    min-width: 400px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px 32px;
-    margin-bottom: 8px;
-    border-radius: 2px;
-    background-color: #EEEEEE;
-  }
- 
-  .productComponent{
-    background: white;
-    margin: 8px;
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 250px;
-    max-height: 250px;
-    border-radius: 20px;
-  }
-
-  .productsList{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .topBox{
-    margin-top: 15px;
-    display: flex;
-  }
-  .bottomBox{
-    margin-left: 10px;
   }

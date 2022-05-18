@@ -1,6 +1,6 @@
 <div class="productsList">
     
-    <div class="productComponent" *ngFor="let product of products">
+    <div class="productComponent"  style="--clr:#1e9bff" *ngFor="let product of products">
         <div class="topBox">
             <img src="{{product.image}}" alt="imgProduto" width="120px" height="100px">
             <h3>
@@ -9,7 +9,6 @@
                     {{product.name}}
                 </a>
             </h3>
-        </div>
         <div class="bottomBox">
             <h2>
                 <p>R${{product.price}}</p>
@@ -19,8 +18,9 @@
                     {{product.description}}
                 </p>
             </h2>
-            <img src="assets/coracao.png" alt="imgCoracao" width="30px" height="30px">
+                <img src="assets/coracao.png" alt="imgCoracao" width="30px" height="30px">
+            </div>
+            <i></i>
         </div>
-        
     </div>
 </div>
