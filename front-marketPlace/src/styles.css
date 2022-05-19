@@ -9,7 +9,7 @@
  
   body
   {
-    background: #27282c;
+    background: #fff;
   }
   
   router-outlet + *  {
@@ -29,26 +29,13 @@
   p {
     font-size: 14px;
   }
-  
-  /* Hyperlink */
-  
-  a {
-    cursor: pointer;
-    color: #1976d2;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    opacity: 0.8;
-  }
 
   /* Top Bar */
   app-top-bar {
-    position: relative;
-    left: 200px;
+    margin-inline: auto;
     width: 80%;
     height: 68px;
-    background-color: #fff;
+    background-color: #474443;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -58,6 +45,6 @@
   }
   
   app-top-bar h1 {
-    color: black;
+    color: white;
     margin: 0;
   }

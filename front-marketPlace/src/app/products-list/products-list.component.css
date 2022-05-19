@@ -1,24 +1,26 @@
 .productComponent{
     position: relative;
     background: white;
-    color: #fff;
+    color: #000;
     font-weight: lighter;
     text-decoration: none;
 	text-transform: uppercase;
     margin: 8px;
-    min-width: 450px;
-    max-width: 450px;
-    min-height: 200px;
-    max-height: 200px;
+    min-width: 270px;
+    max-width: 270px;
+    min-height: 420px;
+    max-height: 420px;
     border-radius: 20px;
     transition: 0.5s;
+	justify-content: center;
+	align-items: center;
 }
 
 .productComponent:hover
 {
 	background: var(--clr);
 	color: var(--clr);
-	letter-spacing: 0.0075em;
+	letter-spacing: 0.0055em;
 	box-shadow: 0 0 35px var(--clr);
 }
 
@@ -27,8 +29,18 @@
 	content: '';
 	position: absolute;
 	inset: 2px;
-	background: #27282c;
+	background: #fff;
     border-radius: 20px;
+}
+
+a {
+    cursor: pointer;
+    color: var(--clr);
+    text-decoration: none;
+}
+  
+a:hover {
+    opacity: 0.8;
 }
 
 a i
@@ -92,16 +104,12 @@ a:hover i::after
 }
 
 .topBox{
+	margin-left: 20px;
     margin-top: 15px;
-    display: flex;
 }
 
-.bottomBox{
-    margin-left: 10px;
-}
 
 img
 {
-    margin-left: 10px;
     border-radius: 20px;
 }
