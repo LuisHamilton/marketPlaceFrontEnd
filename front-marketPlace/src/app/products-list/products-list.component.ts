@@ -30,5 +30,15 @@ export class ProductsListComponent implements OnInit {
       console.log(error);
     });
   }
-
+  mudarCoracao(idTag : String){
+    console.log(idTag)        
+    var img = document.querySelector('#'+idTag);           
+    if(img?.getAttribute("src") == "../assets/coracaoFull.png"){
+      img?.setAttribute('src', '../assets/coracao.png');  
+    }
+    else{
+      img?.setAttribute('src', '../assets/coracaoFull.png');
+    }
+  }
 }
+

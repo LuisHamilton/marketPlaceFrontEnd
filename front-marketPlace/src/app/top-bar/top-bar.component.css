@@ -4,6 +4,6 @@ a {
     text-decoration: none;
   }
   
-  a:hover {
+a:hover {
     opacity: 0.8;
-  }
+}
