@@ -1,5 +1,5 @@
 <div class="productsList">
-    <div class="productComponent" style="--clr:#84150E" *ngFor="let product of products">
+    <div class="productComponent" style="--clr:darkorange" *ngFor="let product of products">
         <a [title]="product.name + ' details'" [routerLink]="['/product', product.id]">
         <div class="box">
                 <img src="{{product.image}}" alt="imgProduto" width="240px" height="200px">
@@ -22,6 +22,3 @@
                     height="30px" (click)="mudarCoracao('imgCoracao' + product.id)">
     </div>
 </div>
-<!-- #ff7253 -->
-<!-- #84150E -->
-<!-- #fb5754 -->
