@@ -30,7 +30,8 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component : ProductsListComponent},
-      {path: 'product/:productID', component: ProductDetailComponent}
+      {path: 'product/:productID', component: ProductDetailComponent},
+      {path: 'login', component: MarketPlaceAccesComponent}
     ])
   ],
   providers: [],

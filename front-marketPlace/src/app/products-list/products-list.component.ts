@@ -8,7 +8,6 @@ import axios from "axios";
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent implements OnInit {
-
   products = products;
   
   constructor() { }

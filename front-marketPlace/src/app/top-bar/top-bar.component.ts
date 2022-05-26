@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TopBarComponent implements OnInit {
 
   @Input() titulo =""
+  @Input() login ="Login"
   constructor() { }
 
   ngOnInit(): void {

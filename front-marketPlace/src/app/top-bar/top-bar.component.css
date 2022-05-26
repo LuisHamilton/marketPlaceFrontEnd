@@ -2,9 +2,22 @@ a {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
-    margin: 0;
+    transition: 0.5s;
   }
   
 a:hover {
-    opacity: 0.8;
+    color: #193b57;
+}
+
+.TheBar
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+img:hover
+{
+  cursor: pointer;
 }
