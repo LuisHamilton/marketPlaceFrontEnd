@@ -1,6 +1,6 @@
 <div class="productsList">
     <div class="productComponent" style="--clr:darkorange" *ngFor="let product of products">
-        <a [title]="product.name + ' details'" [routerLink]="['/product', product.id]">
+        <a [title]="product.name + ' details'" [routerLink]="['/product', product.id, product.storeid]">
         <div class="box">
                 <img src="{{product.image}}" alt="imgProduto" width="240px" height="200px">
                 <h3>
