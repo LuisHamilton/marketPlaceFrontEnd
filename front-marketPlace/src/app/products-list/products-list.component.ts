@@ -30,8 +30,10 @@ export class ProductsListComponent implements OnInit {
       console.log(error);
     });
   }
-  mudarCoracao(idTag : String){
-    console.log(idTag)        
+  mudarCoracao(idTag : String,idStore : Number, idProd : Number){
+    console.log("Selector: "+idTag)        
+    console.log("IdStore: "+idStore) 
+    console.log("IdProduct: "+idProd) 
     var img = document.querySelector('#'+idTag);           
     if(img?.getAttribute("src") == "../assets/coracaoFull.png"){
       img?.setAttribute('src', '../assets/coracao.png');  

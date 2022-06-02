@@ -5,5 +5,5 @@ export interface Product {
     image: string;
     description: string;
     store: string;
-    storeid: string;
+    storeid: number;
   }
