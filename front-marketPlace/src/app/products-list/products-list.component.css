@@ -110,18 +110,15 @@ a:hover i::after
 
 .box
 {
-	left: 20px;
     top: 25px;
 	position: absolute;
 	z-index: 0;
+	padding: 1vh;
 }
 
-.desc p
+.boxText
 {
-	display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-origin: vertical;
-	overflow: hidden;
+	margin: 0.9vw;
 }
 
 img
@@ -133,4 +130,20 @@ img
 {
 	left: 20px;
 	top: 400px;
+	cursor: pointer;
+}
+
+.product-list_image-container{
+	height: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.imgProduct
+{
+	max-width: 200px;
+	max-height: 200px;
+	justify-content: center;
+	align-items: center;
+	left: 1.4vw;
 }

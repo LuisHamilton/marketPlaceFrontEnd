@@ -2,7 +2,10 @@
     <div class="productComponent" style="--clr:darkorange" *ngFor="let product of products">
         <a [title]="product.name + ' details'" [routerLink]="['/product', product.id, product.storeid]">
         <div class="box">
-                <img src="{{product.image}}" alt="imgProduto" width="240px" height="200px">
+            <div class="product-list_image-container">
+                    <img class="imgProduct" src="{{product.image}}" alt="imgProduto">
+            </div>
+            <div class="boxText">
                 <h3>
                     {{product.name}}
                 </h3>
@@ -16,7 +19,7 @@
                         {{product.description}}
                     </p>
                 </h2>
-                
+            </div>
             </div>
             <i></i>
         </a>

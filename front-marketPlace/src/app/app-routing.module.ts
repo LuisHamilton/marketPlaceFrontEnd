@@ -12,7 +12,9 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
 
 const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'product/:productID/:storeID', component: ProductDetailComponent},
-{path: 'login', component: MarketPlaceAccesComponent}];
+{path: 'login', component: MarketPlaceAccesComponent},
+{path: 'address-register', component: AddressRegisterComponent},
+{path: 'client-register', component: ClientRegisterComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

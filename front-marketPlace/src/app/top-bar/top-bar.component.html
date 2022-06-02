@@ -1,6 +1,16 @@
 <div class="TheBar">
     <img [routerLink]="['/']" src="assets/logosss.png" width="100vh">
-    <a [routerLink]="['/login']">
-        <h1>{{login}}</h1>
-    </a>
+    <nav>
+        <ul class="dropdown-menu">
+            <li>
+                <a style="font-size: 22px;">USER</a>
+                <ul class="dropdown-submenu">
+                    <li><a>PERFIL</a></li>
+                    <li><a>PURCHASES</a></li>
+                    <li><a>WISHLIST</a></li>
+                    <li><a [routerLink]="['/login']">LOGIN</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </div>
