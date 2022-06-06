@@ -1,6 +1,69 @@
-<div *ngIf="product">
+<!-- <div *ngIf="product">
     <img src="{{product.image}}" alt="imgProduto" width="120px" height="100px">
     <h3>{{product.name}} from {{product.store}}</h3>
     <p>{{product.description}}</p>
     <h4>{{product.price | currency}}</h4>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productDetail.css">
+    <title>Product detail</title>
+</head>
+<body>
+    
+
+<div class = "card-wrapper">
+    <div class = "card">
+      <!-- card left -->
+      <div class = "product-imgs">
+        <div class = "img-display">
+          <div class = "img-showcase">
+            <img src = "{{product.image}}" alt = "imgProduct">
+
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- card right -->
+      <div class = "product-content">
+        <h2 class = "product-title">{{product.name}} from {{product.store}}</h2>
+
+        <div class = "product-rating">
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star-half-alt"></i>
+        </div>
+  
+        <div class = "product-price">
+          <p class = "new-price">Price: $ <span>{{product.price | currency}}</span></p>
+        </div>
+  
+        <div class = "product-detail">
+          <h2>About this item: </h2>
+          <p>{{product.description}}</p>
+          
+        </div>
+        <br>
+        <br>
+        <br>
+        <br><br><br>
+        <div class = "purchase-info">
+          <button type = "button" class = "btn">
+            Add to Cart <i class = "fas fa-shopping-cart"></i>
+          </button>
+          <button type = "button" class = "btn">add to WishList</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
