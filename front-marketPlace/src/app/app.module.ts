@@ -11,7 +11,6 @@ import { AddressRegisterComponent } from './address-register/address-register.co
 import { ClientRegisterComponent } from './client-register/client-register.component';
 import { MarketPlaceAccesComponent } from './market-place-acces/market-place-acces.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
-import { InitialPageComponent } from './initial-page/initial-page.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
     AddressRegisterComponent,
     ClientRegisterComponent,
     MarketPlaceAccesComponent,
-    StoreRegisterComponent,
-    InitialPageComponent
+    StoreRegisterComponent
   ],
   imports: [
     BrowserModule,

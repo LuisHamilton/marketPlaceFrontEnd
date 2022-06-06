@@ -17,9 +17,14 @@ a:hover {
   align-items: center;
   width: 100%;
 }
+img
+{
+  transition: 0.5s;
+}
 img:hover
 {
   cursor: pointer;
+  transform: scale(1.1);
 }
 .dropdown-menu{
   display: flex;

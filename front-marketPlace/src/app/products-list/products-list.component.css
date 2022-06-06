@@ -131,6 +131,11 @@ img
 	left: 20px;
 	top: 400px;
 	cursor: pointer;
+	transition: 0.5s;
+}
+.heart:hover
+{
+	transform: scale(2);
 }
 
 .product-list_image-container{
