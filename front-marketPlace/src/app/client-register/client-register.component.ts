@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import axios from 'axios';
 
 @Component({
   selector: 'app-client-register',
@@ -7,9 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientRegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
 }

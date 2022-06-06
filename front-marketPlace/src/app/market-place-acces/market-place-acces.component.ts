@@ -21,7 +21,6 @@ export class MarketPlaceAccesComponent implements OnInit {
       "login": user?.value,
       "passwd": passwd?.value
     });
-    console.log(user.value, passwd.value)
     var config = {
       method: 'post',
       url: 'http://localhost:5151/Client/login',
@@ -33,7 +32,6 @@ export class MarketPlaceAccesComponent implements OnInit {
     let instance = this;
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
       localStorage.setItem('authToken', response.data);
       instance.router.navigate(['/']);
     }).catch(function (error) {

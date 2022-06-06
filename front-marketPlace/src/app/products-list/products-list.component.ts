@@ -23,7 +23,6 @@ export class ProductsListComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
       instance.products = response.data;
     })
     .catch(function (error) {

@@ -31,7 +31,6 @@ export class ProductDetailComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
       instance.product = response.data;
     })
     .catch(function (error) {
