@@ -4,20 +4,8 @@
     <p>{{product.description}}</p>
     <h4>{{product.price | currency}}</h4>
 </div> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="productDetail.css">
-    <title>Product detail</title>
-</head>
-<body>
-    
-
-<div class = "card-wrapper">
+<div *ngIf="product">
+  <div class = "card-wrapper">
     <div class = "card">
       <!-- card left -->
       <div class = "product-imgs">
@@ -43,7 +31,7 @@
         </div>
   
         <div class = "product-price">
-          <p class = "new-price">Price: $ <span>{{product.price | currency}}</span></p>
+          <p class = "new-price"><span>Price: R$ {{product.price}}</span></p>
         </div>
   
         <div class = "product-detail">
@@ -65,5 +53,5 @@
       </div>
     </div>
   </div>
-</body>
-</html>
+</div>
+
