@@ -8,7 +8,7 @@
     width: min-content;
     align-items: center;
     color:#2b344b;
-	animation:iniciarC 1.6s ease-out;
+	animation:iniciar 1.6s ease-out;
 	pointer-events: all;
 	margin-top: 40vh;
 	box-shadow: 0 0 5px 1px ;
@@ -103,7 +103,7 @@ a:hover i::after{
 	width: 20px;
 	left: 80%;
 }
-@keyframes iniciarC{
+@keyframes iniciar{
 	0%{
 		opacity: 0;
 		pointer-events: none;
