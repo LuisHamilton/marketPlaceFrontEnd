@@ -1,37 +1,37 @@
-<div class="form">
-    <form action="">
-        <h2 class="title">Cadastro:</h2>
-        <label for="name">Name</label>
-        <div class = "input">
-            <input id="name" name="name" placeholder="Name" type="text">
-        </div>
-        <label for="phone">Phone</label>
-        <div class = "input">
-            <input id="phone" name="phone" placeholder="Phone" type="text">
-        </div>
-        <label for="e-mail">E-mail</label>
-        <div class = "input">
-            <input id="e-mail" name="e-mail" placeholder="E-mail" type="text">
-        </div>
-        <label for="login">User Login</label>
-        <div class = "input">
-            <input id="login" name="login" placeholder="User Login" type="text">
-        </div>
-        <label for="date-of_birth">Date of Birth</label>
-        <div class = "input">
-            <input id="date-of_birth" name="date-of_birth" placeholder="Date of Birth" type="text">
-        </div>
-        <label for="password">Password</label>
-        <div class = "input">
-            <input id="password" name="password" placeholder="Password" type="password">
-        </div>
-        <label for="document">Document</label>
-        <div class = "input">
-            <input id="document" name="document" placeholder="Document" type="text">
-        </div>
-        <div class ="btn">
-            <a style="--clr:#ff7253"><span>Continuar</span><i></i></a>
-        </div>
-
-    </form>
+<div *ngIf="formulario==true" class="form">
+    <h2 class="title">Cadastro:</h2>
+    <label for="name">Nome</label>
+    <div class = "input">
+        <input id="name" name="name" placeholder="Nome" type="text">
+    </div>
+    <label for="phone">Telefone</label>
+    <div class = "input">
+        <input id="phone" name="phone" placeholder="Telefone" type="text">
+    </div>
+    <label for="e-mail">E-mail</label>
+    <div class = "input">
+        <input id="e-mail" name="e-mail" placeholder="E-mail" type="text">
+    </div>
+    <label for="login">Login</label>
+    <div class = "input">
+        <input id="login" name="login" placeholder="Login" type="text">
+    </div>
+    <label for="date_of_birth">Data de Nascimento</label>
+    <div class = "input">
+        <input id="date_of_birth" name="date_of_birth" placeholder="Data de Nascimento" type="text">
+    </div>
+    <label for="password">Senha</label>
+    <div class = "input">
+        <input id="password" name="password" placeholder="Senha" type="password">
+    </div>
+    <label for="document">CPF/CNPJ</label>
+    <div class = "input">
+        <input id="document" name="document" placeholder="CPF/CNPJ" type="text">
+    </div>
+    <div class ="btn">
+        <a (click)="continuar()" style="--clr:#ff7253"><span>Continuar</span><i></i></a>
+        <br><br><br>
+        <a style="--clr:#ff7253"><span>Cancelar</span><i></i></a>
+    </div>
 </div>
+<app-address-register *ngIf="formulario==false"></app-address-register>

@@ -8,7 +8,7 @@
     width: min-content;
     align-items: center;
     color:#2b344b;
-	animation:iniciar 1.6s ease-out;
+	animation:iniciarC 1.6s ease-out;
 	pointer-events: all;
 	margin-top: 40vh;
 	box-shadow: 0 0 5px 1px ;
@@ -16,6 +16,7 @@
 .title{
     font-size: 1,8em;
     margin-bottom: 10%;
+	text-align: center;
 }
 .input{
     min-width: 280px;
@@ -102,14 +103,12 @@ a:hover i::after{
 	width: 20px;
 	left: 80%;
 }
-@keyframes iniciar{
+@keyframes iniciarC{
 	0%{
-		margin-top: 0vh;
 		opacity: 0;
 		pointer-events: none;
 	}
 	100%{
-		margin-top: 40vh;
 		opacity: 100%;
 		pointer-events: all;
 	}

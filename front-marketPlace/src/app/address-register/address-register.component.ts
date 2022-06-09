@@ -11,5 +11,4 @@ export class AddressRegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

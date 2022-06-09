@@ -62,6 +62,7 @@ img{
     height: 4px;
     width: 80px;
     background: #12263a;
+    opacity: 0.5;
 }
 .product-link{
     text-decoration: none;
