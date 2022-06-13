@@ -10,7 +10,7 @@
     color:#2b344b;
 	animation:iniciar 1.6s ease-out;
 	pointer-events: all;
-	margin-top: 40vh;
+	margin-top: 30vh;
 	box-shadow: 0 0 5px 1px ;
 }
 .title{
@@ -24,6 +24,11 @@
     border:2px #6f7e8a solid;
     padding:5px;
     margin: 0px 0px 12px - 5px;
+	transition: 0.5s;
+}
+.input:hover
+{
+	border: 2px darkorange solid;
 }
 .input input{
     width:80% ;

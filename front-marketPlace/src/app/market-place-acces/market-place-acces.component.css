@@ -27,6 +27,11 @@ img
     border:2px #6f7e8a solid;
     padding:5px;
     margin: 0px 0px 12px - 5px;
+	transition: 0.5s;
+}
+.input:hover
+{
+	border: 2px darkorange solid;
 }
 .input input{
     width:80% ;

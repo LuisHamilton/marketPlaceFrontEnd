@@ -8,18 +8,11 @@ import axios from 'axios';
   styleUrls: ['./client-register.component.css']
 })
 export class ClientRegisterComponent implements OnInit {
+  titlePage="cadastro"
 
-  formulario: Boolean | null;
-
-  constructor(private router: Router) {
-    this.formulario = true;
-   }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  }
-
-  continuar(){
-    this.formulario = false;
   }
 
   cadastro(){
@@ -36,15 +29,23 @@ export class ClientRegisterComponent implements OnInit {
     let Country = document.getElementById("country") as HTMLInputElement;
     let Postal_Code = document.getElementById("postal_code") as HTMLInputElement;
 
+    var Address = {
+      "street" : Street.value,
+      "city" : City.value,
+      "state" : State.value,
+      "country" : Country.value,
+      "postal_code" : Postal_Code.value
+    }
+
     var data = JSON.stringify({
       "name" : Name.value,
       "phone" : Phone.value,
       "email" : Email.value,
       "login" : Login.value,
       "date_of_birth" : Date_of_birth.value,
-      "password" : Password.value,
+      "passwd" : Password.value,
       "document" : Document.value,
-      "address" : null
+      "address" : Address
     });
 
     var config = {
@@ -60,8 +61,10 @@ export class ClientRegisterComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
-      instance.router.navigate(['/address-register']);
+      instance.router.navigate(['/login']);
+    }).catch(function (error) {
+      alert("Erro no cadastro");
+      console.log(error);
     });
   }
 }

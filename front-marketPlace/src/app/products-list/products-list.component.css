@@ -5,6 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	animation:iniciarP 1.6s ease-out;
+	margin-top: 10vh;
 }
 @keyframes iniciarP
 {

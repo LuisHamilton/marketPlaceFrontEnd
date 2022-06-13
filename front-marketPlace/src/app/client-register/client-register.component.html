@@ -1,4 +1,5 @@
-<div *ngIf="formulario==true" class="form">
+<app-top-bar [titulo]="titlePage"></app-top-bar>
+<div class="form">
     <h2 class="title">Cadastro:</h2>
     <label for="name">Nome</label>
     <div class = "input">
@@ -28,10 +29,10 @@
     <div class = "input">
         <input id="document" name="document" placeholder="CPF/CNPJ" type="text">
     </div>
+    <app-address-register></app-address-register>
     <div class ="btn">
-        <a (click)="continuar()" style="--clr:#ff7253"><span>Continuar</span><i></i></a>
+        <a (click)="cadastro()" style="--clr:#ff7253"><span>Cadastrar</span><i></i></a>
         <br><br><br>
-        <a style="--clr:#ff7253"><span>Cancelar</span><i></i></a>
+        <a [routerLink]="['/login']" style="--clr:#ff7253"><span>Cancelar</span><i></i></a>
     </div>
 </div>
-<app-address-register *ngIf="formulario==false"></app-address-register>

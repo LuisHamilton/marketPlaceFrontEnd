@@ -3,12 +3,14 @@
     <nav>
         <ul class="dropdown-menu">
             <li>
-                <a style="font-size: 22px;">CONTA</a>
+                <a *ngIf="logado==false" style="font-size: 22px;">SERVIÇOS</a>
+                <a *ngIf="logado==true" style="font-size: 22px;">LOGADO</a>
                 <ul class="dropdown-submenu">
-                    <li><a>PERFIL</a></li>
-                    <li><a>PURCHASES</a></li>
-                    <li><a>WISHLIST</a></li>
-                    <li><a [routerLink]="['/login']">LOGIN</a></li>
+                    <li><a (click)="verPerfil()">PERFIL</a></li>
+                    <li><a (click)="verCompras()">PURCHASES</a></li>
+                    <li><a (click)="verWishList()">WISHLIST</a></li>
+                    <li *ngIf="logado==false"><a [routerLink]="['/login']">LOGIN</a></li>
+                    <li *ngIf="logado==true"><a (click)="deslogar()">LOG OUT</a></li>
                 </ul>
             </li>
         </ul>

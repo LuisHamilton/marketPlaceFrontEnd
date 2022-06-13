@@ -21,7 +21,7 @@ import { StoreRegisterComponent } from './store-register/store-register.componen
     AddressRegisterComponent,
     ClientRegisterComponent,
     MarketPlaceAccesComponent,
-    StoreRegisterComponent
+    StoreRegisterComponent,
   ],
   imports: [
     BrowserModule,

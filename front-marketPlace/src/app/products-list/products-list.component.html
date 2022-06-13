@@ -1,3 +1,4 @@
+<app-top-bar [titulo]="titlePage"></app-top-bar>
 <div class="productsList">
     <div class="productComponent" style="--clr:darkorange" *ngFor="let product of products">
         <a [title]="product.name + ' details'" [routerLink]="['/product', product.id, product.storeid]">

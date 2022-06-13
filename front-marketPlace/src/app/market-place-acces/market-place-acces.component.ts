@@ -8,6 +8,7 @@ import axios from 'axios';
   styleUrls: ['./market-place-acces.component.css']
 })
 export class MarketPlaceAccesComponent implements OnInit {
+  titlePage="login"
 
   constructor(private router: Router) { }
 
@@ -35,8 +36,8 @@ export class MarketPlaceAccesComponent implements OnInit {
       localStorage.setItem('authToken', response.data);
       instance.router.navigate(['/']);
     }).catch(function (error) {
-      console.log(error);
       localStorage.removeItem('authToken');
+      alert("Usuário ou senha não encontrado!!");
     });
   }
 }
