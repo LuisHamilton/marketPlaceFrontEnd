@@ -34,6 +34,7 @@ export class MarketPlaceAccesComponent implements OnInit {
     axios(config)
     .then(function (response) {
       localStorage.setItem('authToken', response.data);
+      localStorage.setItem('authLogin', user?.value);
       instance.router.navigate(['/']);
     }).catch(function (error) {
       localStorage.removeItem('authToken');

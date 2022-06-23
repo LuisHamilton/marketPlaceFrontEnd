@@ -7,13 +7,15 @@ import { AddressRegisterComponent } from './address-register/address-register.co
 import { ClientRegisterComponent } from './client-register/client-register.component';
 import { MarketPlaceAccesComponent } from './market-place-acces/market-place-acces.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'product/:productID/:storeID', component: ProductDetailComponent},
 {path: 'login', component: MarketPlaceAccesComponent},
 {path: 'address-register', component: AddressRegisterComponent},
-{path: 'client-register', component: ClientRegisterComponent}];
+{path: 'client-register', component: ClientRegisterComponent},
+{path: 'perfil', component: PerfilComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
