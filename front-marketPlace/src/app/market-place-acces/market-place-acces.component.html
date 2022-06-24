@@ -2,6 +2,11 @@
 <div class="form">
     <form action="">
         <img src="assets/logosss.png" width="70%">
+        <br>
+        <div class="radios">
+            <input id="radClient" type="radio" name="userType" value="client"CHECKED>Cliente
+            <input id="racOwner" class="rad2" type="radio" name="userType" value="owner">Lojista
+        </div>
         <h2 class="title"></h2>
         <label for="user">User</label>
         <div class = "input">
@@ -12,7 +17,7 @@
             <input id="password" name="password" placeholder="Password" type="password">
         </div>
         <div class ="btn">
-            <a class="logar" (click)="login()" style="--clr:#ff7253"><span>Login</span><i></i></a>
+            <a class="logar" (click)="loginClient()" style="--clr:#ff7253"><span>Login</span><i></i></a>
         </div>
         <br>
         <div class="cadastro">

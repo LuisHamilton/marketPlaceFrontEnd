@@ -7,7 +7,10 @@ export interface UserInformation {
     email: string;
     date_of_birth: Date;
     document: string;
-    addressid: number;
+    address: UserAddress;
+}
+export interface UserAddress{
+    id: number;
     street: string;
     city: string;
     state: string;

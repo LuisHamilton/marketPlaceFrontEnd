@@ -1,4 +1,26 @@
 <app-top-bar [titulo]="titlePage"></app-top-bar>
 <div class="perfil" *ngIf="userInformation">
-    <h1 id="user">{{userInformation.name}}</h1>
+    <div class="dados">
+        <h1>Dados:</h1>
+        <p>Nome: {{userInformation.name}}</p>
+        <p>Login: {{userInformation.login}}</p>
+        <p>CPF: {{userInformation.document}}</p>
+        <p>Data de Nascimento: {{userInformation.date_of_birth | date: 'dd/MM/yyyy'}}</p>
+        <p>Telefone: {{userInformation.phone}}</p>
+        <p>Email: {{userInformation.email}}</p>
+        <div class ="btn">
+            <a class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
+        </div>
+    </div>
+    <div class="address">
+        <h1>Endereço:</h1>
+        <p>Logradouro: {{userInformation.address.street}}</p>
+        <p>Cidade: {{userInformation.address.city}}</p>
+        <p>Estado: {{userInformation.address.state}}</p>
+        <p>País: {{userInformation.address.country}}</p>
+        <p>Código Postal: {{userInformation.address.postal_code}}</p>
+        <div class ="btn">
+            <a class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
+        </div>
+    </div>
 </div>

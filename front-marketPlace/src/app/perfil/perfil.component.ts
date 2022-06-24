@@ -33,6 +33,7 @@ export class PerfilComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
+      console.log(response.data)
       instance.userInformation = response.data;
     })
     .catch(function (error) {
