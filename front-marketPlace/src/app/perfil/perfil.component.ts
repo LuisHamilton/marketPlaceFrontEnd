@@ -24,9 +24,9 @@ export class PerfilComponent implements OnInit {
 
     var config = {
       method: 'get',
-      url: 'http://localhost:5151/Client/get/',
+      url: 'http://localhost:5151/Client/get',
       headers: { 
-        'Authorization': 'Bearer' + localStorage.getItem("authToken"),
+        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
         'Content-Type': 'application/json'
       }
     };
