@@ -1,38 +1,64 @@
 <app-top-bar [titulo]="titlePage"></app-top-bar>
-<div class="form">
-    <h2 class="title">Cadastro:</h2>
-    <label for="name">Nome</label>
-    <div class = "input">
-        <input id="name" name="name" placeholder="Nome" type="text">
+
+
+<div class="formDados">
+    <div class="form">
+        <h2 class="title">Cadastro:</h2>
+        <label for="name">Nome</label>
+        <div class = "input">
+            <input id="name" name="name" placeholder="Nome" type="text">
+        </div>
+        <label for="phone">Telefone</label>
+        <div class = "input">
+            <input id="phone" name="phone" placeholder="Telefone" type="text">
+        </div>
+        <label for="e-mail">E-mail</label>
+        <div class = "input">
+            <input id="e-mail" name="e-mail" placeholder="E-mail" type="text">
+        </div>
+        <label for="login">Login</label>
+        <div class = "input">
+            <input id="login" name="login" placeholder="Login" type="text">
+        </div>
+        <label for="date_of_birth">Data de Nascimento</label>
+        <div class = "input">
+            <input id="date_of_birth" name="date_of_birth" placeholder="Data de Nascimento" type="text">
+        </div>
+        <label for="password">Senha</label>
+        <div class = "input">
+            <input id="password" name="password" placeholder="Senha" type="password">
+        </div>
+        <label for="document">CPF/CNPJ</label>
+        <div class = "input">
+            <input id="document" name="document" placeholder="CPF/CNPJ" type="text">
+        </div>
+        <br><br>
+        <div class ="btn">
+            <a (click)="DadosToEndOrCadToEnd()" style="--clr:#ff7253" id="cont-cliente"><span>Continuar</span><i></i></a>
+            <br><br><br>
+            <a [routerLink]="['/login']" style="--clr:#ff7253" id="cancel-cliente"><span>Cancelar</span><i></i></a>
+        </div>
     </div>
-    <label for="phone">Telefone</label>
-    <div class = "input">
-        <input id="phone" name="phone" placeholder="Telefone" type="text">
-    </div>
-    <label for="e-mail">E-mail</label>
-    <div class = "input">
-        <input id="e-mail" name="e-mail" placeholder="E-mail" type="text">
-    </div>
-    <label for="login">Login</label>
-    <div class = "input">
-        <input id="login" name="login" placeholder="Login" type="text">
-    </div>
-    <label for="date_of_birth">Data de Nascimento</label>
-    <div class = "input">
-        <input id="date_of_birth" name="date_of_birth" placeholder="Data de Nascimento" type="text">
-    </div>
-    <label for="password">Senha</label>
-    <div class = "input">
-        <input id="password" name="password" placeholder="Senha" type="password">
-    </div>
-    <label for="document">CPF/CNPJ</label>
-    <div class = "input">
-        <input id="document" name="document" placeholder="CPF/CNPJ" type="text">
-    </div>
+</div>
+
+
+<div class="formEndereco hide-component">
     <app-address-register></app-address-register>
-    <div class ="btn">
-        <a (click)="cadastro()" style="--clr:#ff7253"><span>Cadastrar</span><i></i></a>
+    <div class ="btn End">
+        <a (click)="EndToCad()" style="--clr:#ff7253" id="cont-adress"><span>Continuar</span><i></i></a>
         <br><br><br>
-        <a [routerLink]="['/login']" style="--clr:#ff7253"><span>Cancelar</span><i></i></a>
+        <a (click)="EndToDados()" style="--clr:#ff7253" id="volt-address"><span>Voltar</span><i></i></a>
     </div>
+</div>
+
+
+<div class ="btnFim hide-component">
+    <div class="radios">
+        <input (click)="tipoClient()" id="radClient" type="radio" name="userType" value="client"CHECKED>Cliente
+        <input (click)="tipoOwner()" id="radOwner" class="rad2" type="radio" name="userType" value="owner">Lojista
+    </div>
+    <br><br>
+    <a (click)="checar()" style="--clr:#ff7253" id="cadastrar"><span>Cadastrar</span><i></i></a>
+    <br><br><br>
+    <a (click)="DadosToEndOrCadToEnd()" style="--clr:#ff7253" id="volt-cadastrar"><span>Voltar</span><i></i></a>
 </div>

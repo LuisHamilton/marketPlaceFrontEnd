@@ -9,18 +9,26 @@ import axios from 'axios';
 })
 export class MarketPlaceAccesComponent implements OnInit {
   titlePage="login"
+  tipoLogin: Boolean | undefined
 
   constructor(private router: Router) { 
+    this.tipoLogin=true;
   }
 
   ngOnInit(): void {
   }
+
+  tipoClient(){
+    this.tipoLogin=true;
+  }
+  tipoOwner(){
+    this.tipoLogin=false;
+  }
+
   checar(){
-    let client = document.getElementById('#radClient') as HTMLInputElement;
-    let owner = document.getElementById('#radOwner') as HTMLInputElement;
-    if(client.checked){
+    if(this.tipoLogin==true){
       this.loginClient();
-    } else if(owner.checked){
+    } else if(this.tipoLogin==false){
       this.loginOwner();
     }
   }

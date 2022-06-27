@@ -10,8 +10,9 @@
     color:#2b344b;
 	animation:iniciar 1.6s ease-out;
 	pointer-events: all;
-	margin-top: 80vh;
+	margin-top: 50vh;
 	box-shadow: 0 0 5px 1px ;
+	min-height: 550px
 }
 .title{
     font-size: 1,8em;
@@ -30,7 +31,6 @@
 {
 	border: 2px darkorange solid;
 }
-
 .input input{
     width:80% ;
     border: none;
@@ -43,10 +43,20 @@
 	border: 2px darkorange solid;
 }
 .btn{
-    /* margin-top: 1%; */
     width: 100%;
     text-align: center ;
 	cursor: pointer;
+}
+.End{
+	animation:iniciar 1.6s ease-out;
+	margin-top: -360px;
+}
+.btnFim{
+	margin-top: 450px;
+    width: 100%;
+    text-align: center ;
+	cursor: pointer;
+	animation:iniciar 1.6s ease-out;
 }
 a{
 	position: relative;
@@ -64,8 +74,8 @@ a{
 a:hover{
 	background: var(--clr);
 	color: var(--clr);
-	letter-spacing: 0.25em;
 	box-shadow: 0 0 35px var(--clr);
+	letter-spacing: 0.2em;
 }
 a:before{
 	content: '';
@@ -113,6 +123,15 @@ a:hover i::after{
 	width: 20px;
 	left: 80%;
 }
+.rad2{
+	margin-left: 40px;
+	font-size: 2em;
+}
+
+.hide-component{
+	display: none;
+}
+
 @keyframes iniciar{
 	0%{
 		opacity: 0;
