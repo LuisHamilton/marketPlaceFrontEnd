@@ -20,11 +20,9 @@ export class ClientRegisterComponent implements OnInit {
 
   tipoClient(){
     this.tipoCadastro=true;
-    console.log("cadastrar CLiente");
   }
   tipoOwner(){
     this.tipoCadastro=false;
-    console.log("cadastrar Owner");
   }
   checar(){
     if(this.tipoCadastro==true){
