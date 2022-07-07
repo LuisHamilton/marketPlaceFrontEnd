@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Purchase } from '../purchases';
+import { ActivatedRoute } from '@angular/router';
+import  axios from 'axios';
 
 @Component({
   selector: 'app-purchase-detail',
@@ -6,10 +9,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./purchase-detail.component.css']
 })
 export class PurchaseDetailComponent implements OnInit {
+  titlePage="Compra"
+  purchase: Purchase | undefined
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('productId'));
+    const storeIdFromRoute = Number(routeParams.get('storeId'));
+
+    var instance = this;
+
+    var config = {
+      method: 'get',
+      url: 'http://localhost:5151/Purchase/' + String(productIdFromRoute) + '/' + String(storeIdFromRoute),
+      headers: { }
+    };
+
+    axios(config)
+    .then(function (response) {
+      instance.purchase = response.data;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
 }

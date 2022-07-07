@@ -220,7 +220,21 @@
 	object-fit: cover;
 }
 
-
+.btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: #fff;
+	background: darkorange;
+}
+.btn:hover{
+    opacity: 0.9;
+}
 
 .product-price {
 

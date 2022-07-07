@@ -1,13 +1,13 @@
 <app-top-bar [titulo]="titlePage"></app-top-bar>
 <br><br><br><br>
-<div *ngIf="product">
+<div>
   <div class = "card-wrapper">
     <div class = "card">
       <!-- card left -->
       <div class = "product-imgs">
         <div class = "img-display">
           <div class = "img-showcase">
-            <img src = "{{product.image}}" alt = "imgProduct">
+            <img src = "" alt = "imgProduct">
 
           </div>
 
@@ -16,15 +16,15 @@
       </div>
       <!-- card right -->
       <div class = "product-content">
-        <h2 class = "product-title">{{product.nome}} </h2>
+        <h2 class = "product-title"></h2>
         <div class = "product-price">
-          <p class = "new-price"><span>Price: R$ {{product.price}}</span></p>
+          <p class = "new-price"><span>Price: R$</span></p>
         </div>
         <div class = "product-detail">
           <h2>Loja: </h2>
-          <p>{{product.store}}</p>
+          <p></p>
           <h2>Sobre esse item: </h2>
-          <p>{{product.description}}</p>
+          <p></p>
         </div>
         <br>
         <br>

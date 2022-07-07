@@ -114,13 +114,11 @@ img{
     outline: 0;
     margin-right: 0.2rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+    color: #fff;
 }
 .purchase-info input{
     width: 60px;
-}
-.purchase-info .btn{
-    cursor: pointer;
-    color: #fff;
 }
 .purchase-info .btn:first-of-type{
     background: darkorange;
