@@ -13,6 +13,7 @@ import { MarketPlaceAccesComponent } from './market-place-acces/market-place-acc
 import { StoreRegisterComponent } from './store-register/store-register.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PurchasesListComponent } from './purchases-list/purchases-list.component';
+import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PurchasesListComponent } from './purchases-list/purchases-list.componen
     StoreRegisterComponent,
     PerfilComponent,
     PurchasesListComponent,
+    PurchaseDetailComponent,
   ],
   imports: [
     BrowserModule,
