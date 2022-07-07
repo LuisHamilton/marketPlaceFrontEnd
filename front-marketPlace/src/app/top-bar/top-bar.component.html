@@ -7,10 +7,10 @@
                 <a *ngIf="logado==true" style="font-size: 22px;">LOGADO</a>
                 <ul class="dropdown-submenu">
                     <li><a (click)="verPerfil()">PERFIL</a></li>
-                    <li><a (click)="verCompras()">PURCHASES</a></li>
-                    <li><a (click)="verWishList()">WISHLIST</a></li>
-                    <li *ngIf="logado==false"><a [routerLink]="['/login']">LOGIN</a></li>
-                    <li *ngIf="logado==true"><a (click)="deslogar()">LOG OUT</a></li>
+                    <li><a (click)="verCompras()">COMPRAS</a></li>
+                    <li><a (click)="verWishList()">LISTA DE DESEJOS</a></li>
+                    <li *ngIf="logado==false"><a [routerLink]="['/login']">ENTRAR</a></li>
+                    <li *ngIf="logado==true"><a (click)="deslogar()">SAIR</a></li>
                 </ul>
             </li>
         </ul>

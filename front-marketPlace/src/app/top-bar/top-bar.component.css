@@ -33,7 +33,7 @@ img:hover
 }
 
 .dropdown-menu li{
-  width: 120px;
+  width: 130px;
   height: 50px;
   list-style: none;
 }
@@ -55,7 +55,6 @@ img:hover
 .dropdown-menu li:hover > a{
   background-color: darkorange;
   color: #193b57;
-  letter-spacing: 0.1em;
 }
 
 .dropdown-menu li:hover > .dropdown-submenu {

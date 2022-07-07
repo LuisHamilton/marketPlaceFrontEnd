@@ -1,0 +1,29 @@
+<app-top-bar [titulo]="titlePage"></app-top-bar>
+<div class="purchasesList">
+    <div class="purchaseComponent" style="--clr:darkorange" *ngFor="let purchase of purchases">
+        <a [title]="purchase.productName + ' details'">
+            <div class="box">
+
+                <div class="purchase-list_image-container">
+                    <img class="imgProduct" src="{{purchase.productImg}}" alt="imgProduto">
+            </div>
+                <div class="boxText">
+                    
+                    <h3>
+                        Produto: {{purchase.productName}}
+                    </h3>
+                    <h2>
+                        Loja: {{purchase.storeName}}
+                    </h2>
+                    <h2>
+                        Data: {{purchase.purchaseDate}}
+                    </h2>
+                    <h2>
+                        R$ {{purchase.purchaseAmount}}
+                    </h2>
+                </div>
+            </div>
+            <i></i>
+        </a>
+    </div>
+</div>

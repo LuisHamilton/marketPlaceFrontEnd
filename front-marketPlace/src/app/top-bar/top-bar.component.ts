@@ -37,7 +37,7 @@ export class TopBarComponent implements OnInit {
     let instance = this;
 
     if(this.logado==true){
-      alert("não implementado");
+      instance.router.navigate(['/purchases']);
     }
     else{
       instance.router.navigate(['/login']);

@@ -8,6 +8,7 @@ import { ClientRegisterComponent } from './client-register/client-register.compo
 import { MarketPlaceAccesComponent } from './market-place-acces/market-place-acces.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { PurchasesListComponent } from './purchases-list/purchases-list.component';
 
 
 const routes: Routes = [  {path: '', component : ProductsListComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'login', component: MarketPlaceAccesComponent},
 {path: 'address-register', component: AddressRegisterComponent},
 {path: 'client-register', component: ClientRegisterComponent},
-{path: 'perfil', component: PerfilComponent}];
+{path: 'perfil', component: PerfilComponent},
+{path: 'purchases', component: PurchasesListComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

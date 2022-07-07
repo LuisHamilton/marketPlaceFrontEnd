@@ -12,6 +12,7 @@ import { ClientRegisterComponent } from './client-register/client-register.compo
 import { MarketPlaceAccesComponent } from './market-place-acces/market-place-acces.component';
 import { StoreRegisterComponent } from './store-register/store-register.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { PurchasesListComponent } from './purchases-list/purchases-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     MarketPlaceAccesComponent,
     StoreRegisterComponent,
     PerfilComponent,
+    PurchasesListComponent,
   ],
   imports: [
     BrowserModule,
