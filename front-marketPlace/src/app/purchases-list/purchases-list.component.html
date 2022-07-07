@@ -1,5 +1,5 @@
 <app-top-bar [titulo]="titlePage"></app-top-bar>
-<div class="purchasesList">
+<!-- <div class="purchasesList">
     <div class="purchaseComponent" style="--clr:darkorange" *ngFor="let purchase of purchases">
         <a [title]="purchase.productName + ' details'">
             <div class="box">
@@ -26,4 +26,36 @@
             <i></i>
         </a>
     </div>
+</div> -->
+<div class="container">
+    
+    <div class="cart">
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="" alt="">
+
+                <div class="product-info">
+
+                    <h3 class="product-name">{{purchase.productName}}</h3>
+
+                    <h4 class="product-price">R$ {{purchase.purchaseAmount}}</h4>
+
+                    <p>Data: {{purchase.purchaseDate}}</p>
+
+                    <p class="product-owner"> Owner :{{purchase.storeName}}</p>
+
+                </div>
+
+            </div>   
+              
+
+        </div>
+
+    
+
+    </div>
+
 </div>
