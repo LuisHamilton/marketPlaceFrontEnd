@@ -19,7 +19,7 @@ const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'client-register', component: ClientRegisterComponent},
 {path: 'perfil', component: PerfilComponent},
 {path: 'purchases', component: PurchasesListComponent},
-{path: 'purchase/:productId/:storeId', component: ProductDetailComponent}];
+{path: 'purchase/:productId/:storeId', component: PurchaseDetailComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -24,7 +24,10 @@ export class PurchaseDetailComponent implements OnInit {
     var config = {
       method: 'get',
       url: 'http://localhost:5151/Purchase/' + String(productIdFromRoute) + '/' + String(storeIdFromRoute),
-      headers: { }
+      headers: { 
+        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+        'Content-Type': 'application/json'
+      }
     };
 
     axios(config)
