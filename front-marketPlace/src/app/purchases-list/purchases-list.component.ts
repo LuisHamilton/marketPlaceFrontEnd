@@ -17,7 +17,10 @@ export class PurchasesListComponent implements OnInit {
     var config = {
       method: 'get',
       url: 'http://localhost:5151/Purchase/all',
-      headers: { }
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+        'Content-Type': 'application/json'
+       }
     };
 
     var instance = this;
