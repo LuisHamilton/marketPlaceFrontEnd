@@ -1,6 +1,6 @@
 <app-top-bar [titulo]="titlePage"></app-top-bar>
 <br><br><br><br>
-<div>
+<div *ngIf="purchase">
   <div class = "card-wrapper">
     <div class = "card">
       <!-- card left -->
@@ -16,24 +16,23 @@
       </div>
       <!-- card right -->
       <div class = "product-content">
-        <h2 class = "product-title"></h2>
-        <div class = "product-price">
-          <p class = "new-price"><span>Price: R$</span></p>
-        </div>
+        <h2 class = "product-title">NF: {{purchase.purchaseNF}}</h2>
         <div class = "product-detail">
-          <h2>Loja: </h2>
-          <p></p>
-          <h2>Sobre esse item: </h2>
-          <p></p>
+          <p>Product: {{purchase.productName}}</p>
+          <p>Price: {{purchase.purchaseAmount}}</p>
+          <p>Date Purchase: {{purchase.purchaseDate}}</p>
+          <p>Payment Type: {{purchase.purchasePayment}}</p>
+          <p>Confirmation Number: {{purchase.purchaseNC}}</p>
+
+          <h2>About Client: </h2>
+          <p>Name: {{purchase.clientName}}</p>
+          <p>Document: {{purchase.clientDocument}}</p>
+          <p>Phone: {{purchase.clientPhone}} </p>
         </div>
         <br>
         <br>
         <br>
         <br><br><br>
-        <div class = "purchase-info">
-          <button type = "button" class = "btn">Comprar</button>
-          <button type = "button" class = "btn">Add to WishList</button>
-        </div>
       </div>
     </div>
   </div>

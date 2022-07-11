@@ -1,4 +1,4 @@
-export interface Purchase {
+export interface PurchaseDetail {
     id: number;
     storeId: number;
     productId: number;
@@ -10,4 +10,8 @@ export interface Purchase {
     purchaseNF: number;
     purchaseNC:number;
     purchasePayment : number;
+    clientName: string;
+    clientDocument:string;
+    clientPhone:string;
+
 }

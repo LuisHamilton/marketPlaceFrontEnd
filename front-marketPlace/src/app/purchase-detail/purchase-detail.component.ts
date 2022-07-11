@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Purchase } from '../purchases';
+import { PurchaseDetail } from '../purchase-detail';
 import { ActivatedRoute } from '@angular/router';
 import  axios from 'axios';
 
@@ -10,7 +10,7 @@ import  axios from 'axios';
 })
 export class PurchaseDetailComponent implements OnInit {
   titlePage="Compra"
-  purchase: Purchase | undefined
+  purchase: PurchaseDetail | undefined
 
   constructor(private route: ActivatedRoute) {}
 
