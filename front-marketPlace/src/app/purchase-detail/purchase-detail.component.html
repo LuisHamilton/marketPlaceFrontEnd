@@ -18,22 +18,20 @@
       <div class = "product-content">
         <h2 class = "product-title">NF: {{purchase.purchaseNF}}</h2>
         <div class = "product-detail">
-          <p>Product: {{purchase.productName}}</p>
-          <p>Price: {{purchase.purchaseAmount}}</p>
-          <p>Date Purchase: {{purchase.purchaseDate}}</p>
-          <p>Payment Type: {{purchase.purchasePayment}}</p>
-          <p>Confirmation Number: {{purchase.purchaseNC}}</p>
-
-          <h2>About Client: </h2>
-          <p>Name: {{purchase.clientName}}</p>
-          <p>Document: {{purchase.clientDocument}}</p>
-          <p>Phone: {{purchase.clientPhone}} </p>
-          <ion-icon name="heart"></ion-icon>
+          <p>Produto: {{purchase.productName}}</p>
+          <p>Preço: {{purchase.purchaseAmount}}</p>
+          <p>Data de Compra: {{purchase.purchaseDate}}</p>
+          <p>Tipo de pagamento: {{purchase.purchasePayment}}</p>
+          <p>Número de confirmação: {{purchase.purchaseNC}}</p>
+          <br>
+          <h2>Sobre Cliente: </h2>
+          <p>Nome: {{purchase.clientName}}</p>
+          <p>CPF: {{purchase.clientDocument}}</p>
+          <p>Telefone: {{purchase.clientPhone}} </p>
+          <div class="purchase-info">
+            <button type = "button" class = "btn" [routerLink]="['/purchases']">Back</button>
+          </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br><br><br>
       </div>
     </div>
   </div>

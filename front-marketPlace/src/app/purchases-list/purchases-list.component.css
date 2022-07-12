@@ -158,7 +158,7 @@
 .container{
 
 	max-width: 1200px;
-
+	animation:iniciarP 1.6s ease-out;
     
 	margin-top: 10vh;
 	margin-left: 25vw;
