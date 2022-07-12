@@ -9,4 +9,5 @@ export interface Purchase {
     productName: string;
     purchaseDate: string;
     purchaseAmount: number;
+    
 }

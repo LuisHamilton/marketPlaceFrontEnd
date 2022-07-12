@@ -14,6 +14,8 @@ import { StoreRegisterComponent } from './store-register/store-register.componen
 import { PerfilComponent } from './perfil/perfil.component';
 import { PurchasesListComponent } from './purchases-list/purchases-list.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
+import { SalesListComponent } from './sales-list/sales-list.component';
+import { StocksListComponent } from './stocks-list/stocks-list.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.compo
     PerfilComponent,
     PurchasesListComponent,
     PurchaseDetailComponent,
+    SalesListComponent,
+    StocksListComponent,
   ],
   imports: [
     BrowserModule,
