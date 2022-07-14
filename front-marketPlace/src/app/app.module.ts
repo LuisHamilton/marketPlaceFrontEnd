@@ -17,6 +17,7 @@ import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.compo
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { StocksListComponent } from './stocks-list/stocks-list.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { WishListComponent } from './wish-list/wish-list.component';
     SalesListComponent,
     StocksListComponent,
     WishListComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
