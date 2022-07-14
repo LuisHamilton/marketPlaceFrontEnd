@@ -1,0 +1,18 @@
+<app-top-bar [titulo]="titlePage"></app-top-bar>
+<div class="container">
+    <div class="cart">
+        <div class="products">
+            <div class="product" *ngFor="let wish of wishes">
+                <img class="imgProduct" src="{{wish.productImg}}" alt="imgProduto">
+                <div class="product-info">
+                    <br>
+                    <h3 class="product-name">{{wish.productName}}</h3>
+                    <h4 class="product-price">R$ {{wish.productPrice}}</h4>
+                    <p class="product-owner"> Owner :{{wish.productOwner}}</p>
+                    <br>
+                    <button [routerLink]="['/product-detail', wish.productId, wish.storeId]" type = "button" class = "btn">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

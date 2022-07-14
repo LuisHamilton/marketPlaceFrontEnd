@@ -16,6 +16,7 @@ import { PurchasesListComponent } from './purchases-list/purchases-list.componen
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { StocksListComponent } from './stocks-list/stocks-list.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { StocksListComponent } from './stocks-list/stocks-list.component';
     PurchaseDetailComponent,
     SalesListComponent,
     StocksListComponent,
+    WishListComponent,
   ],
   imports: [
     BrowserModule,
