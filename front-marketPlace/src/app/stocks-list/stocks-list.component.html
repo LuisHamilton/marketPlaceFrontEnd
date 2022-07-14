@@ -1,1 +1,26 @@
-<p>stocks-list works!</p>
+<app-top-bar [titulo]="titlePage"></app-top-bar>
+<div class="productsList">
+    <div class="productComponent" style="--clr:darkorange" *ngFor="let product of products">
+        <a [title]="product.name + ' details'" [routerLink]="['/product', product.id, product.storeid]">
+            <div class="box">
+                <div class="product-list_image-container">
+                        <img class="imgProduct" src="{{product.image}}" alt="imgProduto">
+                </div>
+                <div class="boxText">
+                    <h3>
+                        {{product.name}}
+                    </h3>
+                    <br>
+                    <h2>
+                        <p>R${{product.price}}</p>
+                    </h2>
+                    <br>
+                    <h2>
+                        <p>Quantidade em Estoque: {{product.quantity}}</p>
+                    </h2>
+                </div>
+            </div>
+            <i></i>
+        </a>
+    </div>
+</div>
