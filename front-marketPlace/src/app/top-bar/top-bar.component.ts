@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
 })
 export class TopBarComponent implements OnInit {
   logado : Boolean | null
+  loginTipo : String | null
 
   @Input() titulo =""
   @Input() login ="Login"
   constructor(private router: Router) {
+    this.loginTipo = localStorage.getItem('loginType');
     if(localStorage.getItem('authToken')==null){
       this.logado=false;
     }
@@ -47,7 +49,7 @@ export class TopBarComponent implements OnInit {
     let instance = this;
 
     if(this.logado==true){
-      alert("não implementado");
+      instance.router.navigate(['/wishes']);
     }
     else{
       instance.router.navigate(['/login']);
@@ -57,6 +59,12 @@ export class TopBarComponent implements OnInit {
   deslogar()
   {
     localStorage.removeItem('authToken');
-    window.location.reload();
+    localStorage.removeItem('loginType');
+    let instance = this;
+    if(instance.router.url == '/'){
+      window.location.reload();
+    }else{
+      instance.router.navigate(['/']);
+    }
   }
 }

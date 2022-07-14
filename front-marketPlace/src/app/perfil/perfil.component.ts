@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { UserInformation } from '../userInformation';
 import axios from 'axios';
 
@@ -12,15 +11,11 @@ export class PerfilComponent implements OnInit {
   titlePage="Perfil"
   userInformation : UserInformation | undefined
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
 
-    let instance = this;
-
-    if(localStorage.getItem('authToken')==null){
-      instance.router.navigate(['/']);
-    }
+    var instance = this;
 
     if(localStorage.getItem('loginType')=='client'){
       var config = {

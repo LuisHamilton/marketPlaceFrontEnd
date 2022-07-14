@@ -14,6 +14,9 @@ export class PurchasesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    var instance = this;
+
     var config = {
       method: 'get',
       url: 'http://localhost:5151/Purchase/all',
@@ -22,8 +25,6 @@ export class PurchasesListComponent implements OnInit {
         'Content-Type': 'application/json'
        }
     };
-
-    var instance = this;
 
     axios(config)
     .then(function (response) {

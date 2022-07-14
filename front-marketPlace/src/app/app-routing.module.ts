@@ -10,6 +10,9 @@ import { StoreRegisterComponent } from './store-register/store-register.componen
 import { PerfilComponent } from './perfil/perfil.component';
 import { PurchasesListComponent } from './purchases-list/purchases-list.component';
 import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.component';
+import { SalesListComponent } from './sales-list/sales-list.component';
+import { StocksListComponent } from './stocks-list/stocks-list.component';
+import { WishListComponent } from './wish-list/wish-list.component';
 
 
 const routes: Routes = [  {path: '', component : ProductsListComponent},
@@ -19,7 +22,10 @@ const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'client-register', component: ClientRegisterComponent},
 {path: 'perfil', component: PerfilComponent},
 {path: 'purchases', component: PurchasesListComponent},
-{path: 'purchase/:productId/:storeId', component: PurchaseDetailComponent}];
+{path: 'purchase/:productId/:storeId', component: PurchaseDetailComponent},
+{path: 'sales', component: SalesListComponent},
+{path: 'stocks', component: StocksListComponent},
+{path: 'wishes', component: WishListComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
