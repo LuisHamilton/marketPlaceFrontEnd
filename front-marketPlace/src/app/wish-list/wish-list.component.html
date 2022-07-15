@@ -8,9 +8,10 @@
                     <br>
                     <h3 class="product-name">{{wish.productName}}</h3>
                     <h4 class="product-price">R$ {{wish.productPrice}}</h4>
-                    <p class="product-owner"> Owner :{{wish.productOwner}}</p>
+                    <p class="product-owner"> Owner :{{wish.productStore}}</p>
                     <br>
                     <button [routerLink]="['/product-detail', wish.productId, wish.storeId]" type = "button" class = "btn">Ver Detalhes</button>
+                    <button type = "button" class = "btn">Remover da lista de desejos</button>
                 </div>
             </div>
         </div>
