@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PurchaseDetail } from '../purchase-detail';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import  axios from 'axios';
 
 @Component({
@@ -38,5 +39,4 @@ export class PurchaseDetailComponent implements OnInit {
       console.log(error);
     });
   }
-
 }

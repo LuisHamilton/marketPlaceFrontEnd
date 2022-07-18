@@ -19,7 +19,7 @@
         <h2 class = "product-title">NF: {{purchase.purchaseNF}}</h2>
         <div class = "product-detail">
           <p>Produto: {{purchase.productName}}</p>
-          <p>Preço: {{purchase.purchaseAmount}}</p>
+          <p>Preço: R${{purchase.purchaseAmount}}</p>
           <p>Data de Compra: {{purchase.purchaseDate}}</p>
           <p>Tipo de pagamento: {{purchase.purchasePayment}}</p>
           <p>Número de confirmação: {{purchase.purchaseNC}}</p>
@@ -29,7 +29,7 @@
           <p>CPF: {{purchase.clientDocument}}</p>
           <p>Telefone: {{purchase.clientPhone}} </p>
           <div class="purchase-info">
-            <button type = "button" class = "btn" [routerLink]="['/purchases']">Back</button>
+            <button type = "button" class = "btn" [routerLink]="['/purchases']">Voltar</button>
           </div>
         </div>
       </div>

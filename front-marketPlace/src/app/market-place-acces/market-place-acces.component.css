@@ -115,11 +115,13 @@ img
 }
 .cadastro
 {
-	color: #193b57;
-	text-decoration: underline;
 	text-align: center;
 	cursor: pointer;
 	transition: 0.5s;
+}
+.cadastro a{
+	color:#12263a;
+	text-decoration: none;
 }
 .cadastro:hover
 {

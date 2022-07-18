@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../products';
 import axios from "axios";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -11,8 +12,11 @@ export class ProductsListComponent implements OnInit {
   products:  Array<Product> = []
   titlePage = "PRODUCTS"
   produtos: Array<Product> = []
+  loginTipo : String | null
   
-  constructor() { }
+  constructor(private router: Router) { 
+    this.loginTipo = localStorage.getItem('loginType');
+  }
 
   ngOnInit(): void {
     var config = {
@@ -46,9 +50,7 @@ export class ProductsListComponent implements OnInit {
       axios(config)
       .then(function (response) {
         var img = document.querySelector('#imgCoracao' + produto.id + '_' + produto.storeid);
-        img?.setAttribute('src', '../assets/coracaoFull.png');      
-        console.log(img?.id);
-        
+        img?.setAttribute('src', '../assets/coracaoFull.png');
       })
       .catch(function (error) {
         var img = document.querySelector('#imgCoracao' + produto.id + '_' + produto.storeid);
@@ -58,22 +60,27 @@ export class ProductsListComponent implements OnInit {
   }
   mudarCoracao(idTag : String,idStore : Number, idProd : Number, idStock : number){
 
-    var config = {
-      method: 'get',
-      url: 'http://localhost:5151/WishList/verify/' + idStock,
-      headers: {
-        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
-        'Content-Type': 'application/json'
-       }
-    };
-    let instance = this;
-    axios(config)
-    .then(function (response) {
-      instance.remover(idProd, idStock, idTag);
-    })
-    .catch(function (error) {
-      instance.adicionar(idProd, idStock, idTag);
-    });
+    if(this.loginTipo == 'client'){
+      var config = {
+        method: 'get',
+        url: 'http://localhost:5151/WishList/verify/' + idStock,
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+          'Content-Type': 'application/json'
+         }
+      };
+      let instance = this;
+      axios(config)
+      .then(function (response) {
+        instance.remover(idProd, idStock, idTag);
+      })
+      .catch(function (error) {
+        instance.adicionar(idProd, idStock, idTag);
+      });
+    }
+    else{
+      this.router.navigate(['/login']);
+    }
   }
   adicionar(idProd: Number, idStock: number, idTag: String){
     var img = document.querySelector('#'+idTag);

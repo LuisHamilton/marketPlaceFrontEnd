@@ -131,6 +131,32 @@ a:hover i::after{
 .hide-component{
 	display: none;
 }
+.inputinho{
+	min-width: 280px;
+    border-radius: 22px;
+    border:2px #6f7e8a solid;
+    padding:5px;
+    margin: 0px 0px 12px - 5px;
+	transition: 0.5s;
+	text-align: center;
+}
+.inputinho:hover
+{
+	border: 2px darkorange solid;
+}
+.inputinho textarea{
+	width:95% ;
+	height: 50px;
+    border: none;
+    outline: none;
+    color: #2b344b;
+    font-size: 11pt;
+	resize: none;
+}
+.inputinho textarea:focus.input
+{
+	border: 2px darkorange solid;
+}
 
 @keyframes iniciar{
 	0%{

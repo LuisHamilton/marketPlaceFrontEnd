@@ -10,10 +10,6 @@
         <div class = "input">
             <input id="bar_Code" name="bar_Code" placeholder="Codigo de Barras" type="text">
         </div>
-        <label for="description">Descrição do Produto</label>
-        <div class = "input">
-            <input id="description" name="description" placeholder="Descrição do Produto" type="text">
-        </div>
         <label for="login">Login</label>
         <div class = "input">
             <input id="login" name="login" placeholder="Login" type="text">
@@ -22,9 +18,13 @@
         <div class = "input">
             <input id="img" name="img" placeholder="Imagem do Produto(url)" type="text">
         </div>
+        <label for="description">Descrição do Produto</label>
+        <div class = "inputinho">
+            <textarea id="description" name="description" placeholder="Descrição do Produto" type="text" maxlength="70"></textarea>
+        </div>
         <br><br>
         <div class ="btn">
-            <a style="--clr:#ff7253" id="cont-cliente"><span>Continuar</span><i></i></a>
+            <a style="--clr:#ff7253" id="cont-cliente"><span>Adicionar</span><i></i></a>
             <br><br><br>
             <a [routerLink]="['/login']" style="--clr:#ff7253" id="cancel-cliente"><span>Cancelar</span><i></i></a>
         </div>

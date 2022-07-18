@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { TopBarComponent } from '../top-bar/top-bar.component';
 import { ActivatedRoute } from '@angular/router';
 import { Product} from '../products';
 import  axios from 'axios';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,8 +13,11 @@ export class ProductDetailComponent implements OnInit {
   titlePage="Product Detail";
   title= 'front-marketplace';
   product : Product | undefined
-
-  constructor(private route: ActivatedRoute) { }
+  loginTipo : String | null
+  
+  constructor(private route: ActivatedRoute, private router: Router) { 
+    this.loginTipo = localStorage.getItem('loginType');
+  }
 
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
@@ -38,41 +41,41 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  makePurchase(){
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productID'));
-    const storeIdFromRoute = Number(routeParams.get('storeID'));
-    let date_purchase = new Date();
-    let nf = Math.floor(Math.random() * 899999) + 100000;
-    let nb_cf = Math.floor(Math.random() * 899999999999) + 100000000000;
-
-    var data = JSON.stringify({
-      date_purchase: date_purchase,
-      payment_type: 2,
-      purchase_status: 2,
-      purchase_values: this.product?.price,
-      number_confirmation: nb_cf,
-      number_nf: nf,
-      idProduct: productIdFromRoute,
-      idStore: storeIdFromRoute
-    });
-
-    var config = {
-      method: 'post',
-      url: 'http://localhost:5151/Purchase/make',
-      headers: {
-        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
-        'Content-Type': 'application/json'
-      },
-      data: data,
+  comprar(productId: number, storeId: number, price: number){
+    if(this.loginTipo == 'client'){
+      let date_purchase = new Date('YYYY-MM-DD');
+      let nf = Math.floor(Math.random() * 899999) + 100000;
+      let nb_cf = Math.floor(Math.random() * 899999999999) + 100000000000;
+      alert(date_purchase);
+      // var data = JSON.stringify({
+      //   date_purchase: date_purchase,
+      //   payment_type: 1,
+      //   purchase_status: 1,
+      //   purchase_values: price,
+      //   number_confirmation: nb_cf,
+      //   number_nf: nf
+      // });
+  
+      // var config = {
+      //   method: 'post',
+      //   url: 'http://localhost:5151/Purchase/make/' + productId + '/' + storeId,
+      //   headers: {
+      //     'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+      //     'Content-Type': 'application/json'
+      //   },
+      //   data: data,
+      // }
+  
+      // axios(config)
+      // .then(function (response) {
+      //   alert("Compra realizada");
+      // })
+      // .catch(function (error) {
+      //   alert(error);
+      // });
     }
-
-    axios(config)
-      .then(function (response) {
-        alert("Compra realizada");
-      })
-      .catch(function (error) {
-        alert(error);
-      });
+    else{
+      this.router.navigate(['/login'])
+    }
   }
 }
