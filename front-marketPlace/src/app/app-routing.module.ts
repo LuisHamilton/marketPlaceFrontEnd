@@ -13,6 +13,7 @@ import { PurchaseDetailComponent } from './purchase-detail/purchase-detail.compo
 import { SalesListComponent } from './sales-list/sales-list.component';
 import { StocksListComponent } from './stocks-list/stocks-list.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 const routes: Routes = [  {path: '', component : ProductsListComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [  {path: '', component : ProductsListComponent},
 {path: 'purchase/:productId/:storeId', component: PurchaseDetailComponent},
 {path: 'sales', component: SalesListComponent},
 {path: 'stocks', component: StocksListComponent},
-{path: 'wishes', component: WishListComponent}];
+{path: 'wishes', component: WishListComponent},
+{path: 'addProduct', component: AddProductComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
