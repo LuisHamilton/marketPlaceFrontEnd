@@ -4,5 +4,5 @@ export interface WishList{
     productName : string;
     productPrice : number;
     productImg : string;
-    productOwner : string;
+    productStore : string;
 }
