@@ -162,7 +162,7 @@ export class ClientRegisterComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
-      instance.router.navigate(['/login']);
+      instance.router.navigate(['/storeRegister']);
     }).catch(function (error) {
       alert("Preencha todos os campos corretamente");
       console.log(error);

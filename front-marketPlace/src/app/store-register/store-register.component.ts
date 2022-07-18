@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./store-register.component.css']
 })
 export class StoreRegisterComponent implements OnInit {
-
+  titlePage = "StoreRegister"
   constructor() { }
 
   ngOnInit(): void {
