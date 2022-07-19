@@ -3,8 +3,10 @@
     <nav>
         <ul class="dropdown-menu">
             <li>
-                <a *ngIf="logado==false" style="font-size: 22px;">SERVIÇOS</a>
-                <a *ngIf="logado==true" style="font-size: 22px;">LOGADO</a>
+                <!-- <a *ngIf="logado==false" style="font-size: 22px;">SERVIÇOS</a> -->
+                <img class="user" src="https://icongr.am/entypo/user.svg?size=31&color=ffffff" *ngIf="logado==false"/>
+                <img class="user" src="https://icongr.am/entypo/user.svg?size=31&color=193b57" *ngIf="logado==true"/>
+                <!-- <a *ngIf="logado==true" style="font-size: 22px;">LOGADO</a> -->
                 <ul class="dropdown-submenu">
                     <li><a (click)="verPerfil()">PERFIL</a></li>
                     <li *ngIf="loginTipo != 'owner'"><a (click)="verCompras()">COMPRAS</a></li>

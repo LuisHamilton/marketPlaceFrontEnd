@@ -10,7 +10,6 @@ body{
 }
 .form{
     position :relative;
-    top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     background:#fff;
@@ -21,6 +20,9 @@ body{
     color:#2b344b;
 	animation:iniciar 1.6s ease-out;
 	pointer-events: all;
+	margin-top: 50vh;
+	box-shadow: 0 0 5px 1px ;
+	min-height: 350px
 }
 .title{
     font-size: 1,8em;

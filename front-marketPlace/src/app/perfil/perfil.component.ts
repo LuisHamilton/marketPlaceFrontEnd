@@ -55,4 +55,7 @@ export class PerfilComponent implements OnInit {
 
   }
 
+  alerta(){
+    alert("Não implementado");
+  }
 }

@@ -27,6 +27,7 @@
     text-decoration: none;
 	text-transform: uppercase;
     margin: 26px;
+	margin-bottom: 70px;
     min-width: 270px;
     max-width: 270px;
     min-height: 450px;
@@ -41,7 +42,7 @@
 {
 	background: var(--clr);
 	color: var(--clr);
-	box-shadow: 0 0 35px var(--clr);
+	/* box-shadow: 0 0 35px var(--clr); */
 }
 .productComponent img{
 	position:relative;

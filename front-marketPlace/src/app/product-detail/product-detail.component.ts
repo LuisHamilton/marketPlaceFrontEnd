@@ -43,36 +43,36 @@ export class ProductDetailComponent implements OnInit {
 
   comprar(productId: number, storeId: number, price: number){
     if(this.loginTipo == 'client'){
-      let date_purchase = new Date('YYYY-MM-DD');
+      let date_purchase = new Date();
       let nf = Math.floor(Math.random() * 899999) + 100000;
       let nb_cf = Math.floor(Math.random() * 899999999999) + 100000000000;
-      alert(date_purchase);
-      // var data = JSON.stringify({
-      //   date_purchase: date_purchase,
-      //   payment_type: 1,
-      //   purchase_status: 1,
-      //   purchase_values: price,
-      //   number_confirmation: nb_cf,
-      //   number_nf: nf
-      // });
+
+      var data = JSON.stringify({
+        data_purchase: date_purchase,
+        payment_type: 1,
+        purchase_status: 1,
+        purchase_values: price,
+        number_confirmation: nb_cf,
+        number_nf: nf
+      });
   
-      // var config = {
-      //   method: 'post',
-      //   url: 'http://localhost:5151/Purchase/make/' + productId + '/' + storeId,
-      //   headers: {
-      //     'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
-      //     'Content-Type': 'application/json'
-      //   },
-      //   data: data,
-      // }
+      var config = {
+        method: 'post',
+        url: 'http://localhost:5151/Purchase/make/' + productId + '/' + storeId,
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+          'Content-Type': 'application/json'
+        },
+        data: data,
+      }
   
-      // axios(config)
-      // .then(function (response) {
-      //   alert("Compra realizada");
-      // })
-      // .catch(function (error) {
-      //   alert(error);
-      // });
+      axios(config)
+      .then(function (response) {
+        alert("Compra realizada");
+      })
+      .catch(function (error) {
+        alert(error);
+      });
     }
     else{
       this.router.navigate(['/login'])

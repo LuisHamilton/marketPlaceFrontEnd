@@ -15,7 +15,11 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98.75%;
+  text-align: center;
+}
+h1{
+  color: white;
 }
 img
 {
@@ -79,4 +83,7 @@ img:hover
 }
 .dropdown-submenu li:hover > a{
   border-left: 8px solid #193b57;
+}
+.user{
+  width: 50px;
 }

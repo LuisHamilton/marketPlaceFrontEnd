@@ -65,7 +65,6 @@ img
 	background: var(--clr);
 	color: var(--clr);
 	letter-spacing: 0.25em;
-	box-shadow: 0 0 35px var(--clr);
 }
 .logar:before{
 	content: '';
@@ -116,16 +115,18 @@ img
 .cadastro
 {
 	text-align: center;
-	cursor: pointer;
 	transition: 0.5s;
 }
 .cadastro a{
 	color:#12263a;
 	text-decoration: none;
+	transition: 0.5s;
+	cursor: pointer;
 }
-.cadastro:hover
+.cadastro a:hover
 {
 	letter-spacing: 0.1em;
+	color: #ff7253;
 }
 .radios{
 	text-align: center;

@@ -84,10 +84,28 @@ export class MarketPlaceAccesComponent implements OnInit {
     .then(function (response) {
       localStorage.setItem('authToken', response.data);
       localStorage.setItem('loginType', 'owner');
-      instance.router.navigate(['/']);
+      instance.verificarLoja();
     }).catch(function (error) {
       localStorage.removeItem('authToken');
       alert("Usuário ou senha não encontrado!!");
     });
+  }
+  verificarLoja(){
+    var config = {
+      method: 'get',
+      url: 'http://localhost:5151/Store/get',
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+        'Content-Type': 'application/json'
+      }
+    };
+
+    let instance = this;
+    axios(config)
+    .then(function (response) {
+      instance.router.navigate(['/']);
+    }).catch(function (error) {
+      instance.router.navigate(['/storeRegister']);
+    })
   }
 }

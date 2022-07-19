@@ -45,23 +45,17 @@
 
 	overflow: hidden;
 
-	border: 3px solid darkorange;
+	border: 3px solid white;
 	border-radius: 8px;
 
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 
-	transition: all 0.5s ease-in-out;
+	transition: 0.5s;
 
 }
 
 .product:hover{
-
-	border: none;
-
-	box-shadow: 2px 2px 4px silver;
-
-	transform: scale(1.01);
-
+	border: 3px solid darkorange;
 }
 
 .product > img{

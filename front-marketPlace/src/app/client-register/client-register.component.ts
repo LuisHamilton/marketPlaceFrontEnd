@@ -112,7 +112,6 @@ export class ClientRegisterComponent implements OnInit {
       instance.router.navigate(['/login']);
     }).catch(function (error) {
       alert("Preencha todos os campos corretamente");
-      console.log(error);
     });
   }
 
@@ -162,10 +161,9 @@ export class ClientRegisterComponent implements OnInit {
 
     axios(config)
     .then(function (response) {
-      instance.router.navigate(['/storeRegister']);
+      instance.router.navigate(['/login']);
     }).catch(function (error) {
       alert("Preencha todos os campos corretamente");
-      console.log(error);
     });
   }
 }

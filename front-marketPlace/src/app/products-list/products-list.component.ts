@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ProductsListComponent implements OnInit {
   products:  Array<Product> = []
-  titlePage = "PRODUCTS"
+  titlePage = "MERCADO"
   produtos: Array<Product> = []
   loginTipo : String | null
   
@@ -30,7 +30,9 @@ export class ProductsListComponent implements OnInit {
     axios(config)
     .then(function (response) {
       instance.products = response.data;
-      instance.checar();
+      if(instance.loginTipo == 'client'){
+        instance.checar();
+      }
     })
     .catch(function (error) {
       console.log(error);
@@ -52,10 +54,6 @@ export class ProductsListComponent implements OnInit {
         var img = document.querySelector('#imgCoracao' + produto.id + '_' + produto.storeid);
         img?.setAttribute('src', '../assets/coracaoFull.png');
       })
-      .catch(function (error) {
-        var img = document.querySelector('#imgCoracao' + produto.id + '_' + produto.storeid);
-        img?.setAttribute('src', '../assets/coracao.png');
-      });
     }
   }
   mudarCoracao(idTag : String,idStore : Number, idProd : Number, idStock : number){

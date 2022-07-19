@@ -1,19 +1,17 @@
+<app-top-bar></app-top-bar>
 <div class="form">
     <form action="">
-        <h2 class="title">Store Register</h2>
-        <label for="cnpj">CNPJ</label>
-        <div class = "input">
-            <input id="cnpj" name="cnpj" placeholder="CNPJ" type="text">
-        </div>
+        <h2 class="title">Cadastrar Loja:</h2>
         <label for="name">Name</label>
         <div class = "input">
             <input id="name" name="name" placeholder="Name" type="text">
         </div>
-        <div class ="btn">
-            <a href="#" style="--clr:#ff7253"><span>Save Changes</span><i></i></a>
+        <label for="cnpj">CNPJ</label>
+        <div class = "input">
+            <input id="cnpj" name="cnpj" placeholder="CNPJ" type="text">
         </div>
         <div class ="btn">
-            <a href="#" style="--clr:#ff7253"><span>Cancel</span><i></i></a>
+            <a (click)="cadastrar()" style="--clr:#ff7253"><span>Cadastrar</span><i></i></a>
         </div>
 
     </form>

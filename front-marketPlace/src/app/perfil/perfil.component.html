@@ -9,7 +9,7 @@
         <p>Telefone: {{userInformation.phone}}</p>
         <p>Email: {{userInformation.email}}</p>
         <div class ="btn">
-            <a class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
+            <a (click)="alerta()" class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
         </div>
     </div>
     <div class="address">
@@ -20,7 +20,7 @@
         <p>País: {{userInformation.address.country}}</p>
         <p>Código Postal: {{userInformation.address.postal_code}}</p>
         <div class ="btn">
-            <a class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
+            <a (click)="alerta()" class="logar" style="--clr:#ff7253"><span>Alterar</span><i></i></a>
         </div>
     </div>
 </div>
