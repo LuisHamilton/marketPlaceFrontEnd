@@ -11,7 +11,7 @@
                     <p class="product-owner"> Owner :{{wish.productStore}}</p>
                     <br>
                     <a><button [routerLink]="['/product', wish.productId, wish.storeId]" type = "button" class = "btn">Ver Detalhes</button></a>
-                    <button type = "button" class = "btn">Remover da lista de desejos</button>
+                    <button (click)="remover(wish.stocksId)" type = "button" class = "btn">Remover da lista de desejos</button>
                 </div>
             </div>
         </div>

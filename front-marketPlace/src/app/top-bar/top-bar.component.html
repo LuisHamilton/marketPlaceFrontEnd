@@ -4,8 +4,8 @@
         <ul class="dropdown-menu">
             <li>
                 <!-- <a *ngIf="logado==false" style="font-size: 22px;">SERVIÇOS</a> -->
-                <img class="user" src="https://icongr.am/material/account-circle.svg?size=128&color=ffffff" *ngIf="logado==false"/>
-                <img class="user" src="https://icongr.am/material/account-circle.svg?size=128&color=193b57" *ngIf="logado==true"/>
+                <img *ngIf="logado==false" class="user" src="assets/accountLogoff.png"/>
+                <img *ngIf="logado==true" class="user" src="assets/accountLogin.png"/>
                 <!-- <a *ngIf="logado==true" style="font-size: 22px;">LOGADO</a> -->
                 <ul class="dropdown-submenu">
                     <li><a (click)="verPerfil()">PERFIL</a></li>

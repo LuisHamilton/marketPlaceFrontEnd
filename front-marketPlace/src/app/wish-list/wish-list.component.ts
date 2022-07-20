@@ -9,7 +9,7 @@ import axios from "axios";
   styleUrls: ['./wish-list.component.css']
 })
 export class WishListComponent implements OnInit {
-  wishes:  [WishList] | undefined
+  wishes:  Array<WishList> = []
   titlePage = "Lista de Desejos"
   constructor() { }
 
@@ -34,4 +34,21 @@ export class WishListComponent implements OnInit {
     });
   }
 
+  remover(stocksId: number){
+    var config = {
+      method: 'delete',
+      url: 'http://localhost:5151/WishList/delete/' + stocksId,
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem("authToken"),
+        'Content-Type': 'application/json'
+      }
+    };
+    axios(config)
+    .then(function (response) {
+       window.location.reload();
+    })
+    .catch(function (error) {
+      alert("erro ao remover da wishlist");
+    });
+  }
 }
